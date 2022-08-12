@@ -1,0 +1,22 @@
+#timer{
+    position: absolute;
+    display: flex;
+    left: 40vw;
+    right: 40vw;
+    top: 45vh;
+    bottom: 45vh;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-family: sans-serif;
+    font-size: 30px;
+    background: rgb(93, 93, 93);
+    border: 2px solid rgb(62, 61, 61);
+    color: white;
+    transition: 1s;
+}
+#timer:hover{
+    background: none;
+    border: none;
+    color: black;
+}
