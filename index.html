@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>JavaScript_Test_4</title>
 </head>
-<body">
+<body onload="setInterval(MyTime,1000)">
     <div class="watch">
         <div class="days">
             <div class="day">Monday</div>
@@ -20,8 +20,8 @@
         </div> 
         <div class="watch-bottom">
             <div class="buttons">
-                <button type="submit" name="action" id="btn-clock" onclick="Btn_Clock()"></button>
-                <button type="submit" name="action" id="btn-timer" onclick="Btn_Timer()"></button>
+                <input name="btn" type="radio" id="btn-clock">
+                <input name="btn" type="radio" id="btn-timer">
             </div>
             <div class="time">
                 <div id="clock"></div>
