@@ -7,9 +7,29 @@
     <link rel="stylesheet" href="css/style.css">
     <title>JavaScript_Test_4</title>
 </head>
-<body onload="setInterval(MyTime,1000)">
-    <div class="main">JavaScript_Test_4</div>
-    <div id="timer"></div>
+<body">
+    <div class="watch">
+        <div class="days">
+            <div class="day">Monday</div>
+            <div class="day">Tuesday</div>
+            <div class="day">Wednesday</div>
+            <div class="day">Thursday</div>
+            <div class="day">Friday</div>
+            <div class="day">Saturday</div>
+            <div class="day">Sunday</div>
+        </div> 
+        <div class="watch-bottom">
+            <div class="buttons">
+                <button type="submit" name="action" id="btn-clock" onclick="Btn_Clock()"></button>
+                <button type="submit" name="action" id="btn-timer" onclick="Btn_Timer()"></button>
+            </div>
+            <div class="time">
+                <div id="clock"></div>
+                <div id="timer"></div>
+            </div>
+            <div class="other"></div>
+        </div>
+    </div>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
