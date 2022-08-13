@@ -84,7 +84,54 @@ body{
     font-family: 'Silkscreen', cursive;
     color: white;
 }
-.btn-for-timer-1,
-.btn-for-timer-2{
+#time-txt-right{
+    font-size: 26px;
+    display: flex;
+    font-family: 'Silkscreen', cursive;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+}
+#btns-fortimer{
     display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#btn-for-timer-0,
+#btn-for-timer-1,
+#btn-for-timer-2{
+    display: none;
+}
+.block-fortimer-0,
+.block-fortimer-1,
+.block-fortimer-2{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.btn-for-timer-label-0,
+.btn-for-timer-label-1,
+.btn-for-timer-label-2{
+    position: relative;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/play-solid.svg);
+    background-size: 30px 30px;
+}
+.btn-for-timer-label-1{
+    background: url(../img/pause-solid.svg);
+    background-size: 30px 30px;
+}
+.btn-for-timer-label-2{
+    background: url(../img/square-solid.svg);
+    background-size: 30px 30px;
+}
+.fortimer-txt-0,
+.fortimer-txt-1,
+.fortimer-txt-2{
+    margin-right: 10px;
+    font-size: 18px;
+    font-family: 'Silkscreen', cursive;
+    color: white;
 }

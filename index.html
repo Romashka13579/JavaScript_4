@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>JavaScript_Test_4</title>
 </head>
-
-<body onload="setInterval(MyTime,1000)">
+<body onload="setInterval(MyTime,1000), setInterval(Timer,1000)">
     <div class="watch">
         <div class="days">
             <div class="day">Monday</div>
@@ -38,10 +37,23 @@
                 <div id="clock"></div>
                 <div id="timer"></div>
             </div>
-            <div class="other">
-                <div id="time-txt">13.08.2022</div>
-                <div id="btn-for-timer-1"></div>
-                <div id="btn-for-timer-2"></div>
+            <div id="time-txt-right"></div>
+            <input name="btn" type="radio" id="btn-for-timer-0" onclick="Change('0')">
+            <input name="btn" type="radio" id="btn-for-timer-1" onclick="Change('1')">
+            <input name="btn" type="radio" id="btn-for-timer-2" onclick="Change('2')">
+            <div id="btns-fortimer">
+                <div class="block-fortimer-0">
+                    <div class="fortimer-txt-0">Start - </div>
+                    <label class="btn-for-timer-label-0" for="btn-for-timer-0"></label>
+                </div>
+                <div class="block-fortimer-1">
+                    <div class="fortimer-txt-1">Pause - </div>
+                    <label class="btn-for-timer-label-1" for="btn-for-timer-1"></label>
+                </div>
+                <div class="block-fortimer-2">
+                    <div class="fortimer-txt-2">Finish - </div>
+                    <label class="btn-for-timer-label-2" for="btn-for-timer-2"></label>
+                </div>
             </div>
         </div>
     </div>
