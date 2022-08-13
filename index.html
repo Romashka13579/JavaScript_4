@@ -11,13 +11,13 @@
 <body onload="setInterval(MyTime,1000), setInterval(Timer,1000)">
     <div class="watch">
         <div class="days">
-            <div class="day">Monday</div>
-            <div class="day">Tuesday</div>
-            <div class="day">Wednesday</div>
-            <div class="day">Thursday</div>
-            <div class="day">Friday</div>
-            <div class="day">Saturday</div>
-            <div class="day">Sunday</div>
+            <div id="Monday">Monday</div>
+            <div id="Tuesday">Tuesday</div>
+            <div id="Wednesday">Wednesday</div>
+            <div id="Thursday">Thursday</div>
+            <div id="Friday">Friday</div>
+            <div id="Saturday">Saturday</div>
+            <div id="Sunday">Sunday</div>
         </div>
         <div class="watch-bottom">
             <input name="btn" type="radio" id="btn-clock" onclick="Remove_Timer()">
@@ -51,7 +51,7 @@
                     <label class="btn-for-timer-label-1" for="btn-for-timer-1"></label>
                 </div>
                 <div class="block-fortimer-2">
-                    <div class="fortimer-txt-2">Finish - </div>
+                    <div class="fortimer-txt-2">Stop - </div>
                     <label class="btn-for-timer-label-2" for="btn-for-timer-2"></label>
                 </div>
             </div>

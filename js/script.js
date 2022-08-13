@@ -3,9 +3,20 @@ var timer = document.getElementById("timer")
 var time_txt = document.getElementById("time-txt")
 var time_txt_right = document.getElementById("time-txt-right")
 var btns_fortimer = document.getElementById("btns-fortimer")
+var weekday
+var weekday_1 = "0"
 function MyTime() {
     var time = new Date()
     clock.innerHTML = time.toLocaleTimeString()
+    var time_weekday = new Date()
+    weekday = time_weekday.toLocaleDateString('en-Us', { weekday: 'long' })
+    if(weekday_1 != weekday && weekday_1 != "0"){
+        document.getElementById(weekday_1).style.borderBottom = "0px"
+    }
+    document.getElementById(weekday).style.borderBottom = "3px dotted"
+    weekday_1 = weekday
+    console.log(weekday)
+    console.log(document.getElementById(weekday))
     timer.innerHTML = time1.toLocaleTimeString(options = { hours: "numeric", minutes: "numeric", seconds: "numeric" })
     var time2 = new Date()
     time_txt_right.innerHTML = time2.toLocaleDateString(options = { year: "numeric", month: "numeric", day: "numeric" })
@@ -53,7 +64,7 @@ function Change(i) {
     k = i
 }
 function Timer() {
-    if (k == 0){
+    if (k == 0) {
         s++
         if (s == 60) {
             s = 0
@@ -70,10 +81,10 @@ function Timer() {
         }
         time1.setSeconds(s)
     }
-    else if(k == 2){
-        s=0
-        m=0
-        h=0
+    else if (k == 2) {
+        s = 0
+        m = 0
+        h = 0
         time1 = new Date(0, 0, 0)
     }
 }
