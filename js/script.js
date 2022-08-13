@@ -1,31 +1,39 @@
-
+var clock = document.getElementById("clock")
+var timer = document.getElementById("timer")
+var time_txt = document.getElementById("time-txt")
 function MyTime() {
     var time = new Date()
-    document.getElementById("clock").innerHTML = time.toLocaleTimeString()
-    var time = new Date(0, 0, 0)
-    document.getElementById("timer").innerHTML = time.toLocaleTimeString()
-    if (document.getElementById('btn-clock').checked){
-        document.getElementById("clock").style.fontSize = "80px"
-        document.getElementById("clock").style.color = "transparent"
-        document.getElementById("timer").style.display = "block"
-        document.getElementById("timer").style.fontSize = "40px"
-        document.getElementById("timer").style.color = "white"
-    }
-    else if (document.getElementById('btn-timer').checked){
-        document.getElementById("timer").style.fontSize = "0px"
-        document.getElementById("timer").style.color = "transparent"
-        document.getElementById("clock").style.display = "block"
-        document.getElementById("timer").style.fontSize = "40px"
-        document.getElementById("timer").style.color = "white"
-    }
+    clock.innerHTML = time.toLocaleTimeString()
+    var time1 = new Date(0, 0, 0)
+    timer.innerHTML = time1.toLocaleTimeString()
 }
-function Changes() {
-    document.getElementById("timer").style.fontSize = "40px"
-    document.getElementById("timer").style.color = "white"
-    document.getElementById("clock").style.display = "none"
+function Remove_Clock() {
+    clock.style.fontSize = "80px"
+    clock.style.color = "transparent"
+    setTimeout(Display_1,1000)
 }
-function Changes_false() {
-    document.getElementById("clock").style.fontSize = "40px"
-    document.getElementById("clock").style.color = "white"
-    document.getElementById("timer").style.display = "none"
+function Display_1() {
+    time_txt.remove()
+    clock.style.display = "none"
+    timer.style.display = "block"
+    Timer_Add()
+}
+function Timer_Add() {
+    timer.style.fontSize = "46px"
+    timer.style.color = "white"
+}
+function Remove_Timer() {
+    timer.style.fontSize = "80px"
+    timer.style.color = "transparent"
+    setTimeout(Display_2,1000)
+}
+function Display_2() {
+    time_txt.remove()
+    clock.style.display = "block"
+    timer.style.display = "none"
+    Clock_Add()
+}
+function Clock_Add() {
+    clock.style.fontSize = "46px"
+    clock.style.color = "white"
 }

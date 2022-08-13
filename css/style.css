@@ -9,8 +9,8 @@ body{
     margin: auto;
     display: grid;
     grid-template-rows: 2fr 8fr;
-    background: rgb(93, 93, 93);
-    border: 2px solid rgb(62, 61, 61);
+    background: radial-gradient(circle, rgba(102,102,102,1) 0%, rgba(112,112,112,1) 40%, rgba(158,158,158,1) 100%);
+    border: 3px solid #d96d08;
     border-radius: 25px;
     transition: 1s;
 }
@@ -32,21 +32,59 @@ body{
 }
 #btn-clock,
 #btn-timer{
-    width: 50px;
-    height: 20px;
+    display: none;
+}
+.time{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 #timer,
-#clock{
+#clock,
+#time-txt{
     position: relative;
-    left: auto;
-    right: auto;
+    display: none;
     text-align: center;
-    font-size: 40px;
+    font-size: 46px;
     font-family: 'Silkscreen', cursive;
     color: white;
     transition: 1s;
 }
-#timer{
-    font-size: 0px;
-    color: transparent;
+#time-txt{
+    display: block;
+    font-size: 26px;
+}
+.labels,
+.other{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.block-clock,
+.block-timer{
+    display: flex;
+    align-items: center;
+}
+.btn-clock-label,
+.btn-timer-label{
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    background: url(../img/clock-solid.svg);
+}
+.btn-timer-label{
+    background: url(../img/clock-regular.svg);
+}
+.clock-txt,
+.timer-txt{
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: 'Silkscreen', cursive;
+    color: white;
+}
+.btn-for-timer-1,
+.btn-for-timer-2{
+    display: none;
 }

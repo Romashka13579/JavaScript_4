@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>JavaScript_Test_4</title>
 </head>
+
 <body onload="setInterval(MyTime,1000)">
     <div class="watch">
         <div class="days">
@@ -17,19 +19,33 @@
             <div class="day">Friday</div>
             <div class="day">Saturday</div>
             <div class="day">Sunday</div>
-        </div> 
+        </div>
         <div class="watch-bottom">
-            <div class="buttons">
-                <input name="btn" type="radio" id="btn-clock">
-                <input name="btn" type="radio" id="btn-timer">
+            <input name="btn" type="radio" id="btn-clock" onclick="Remove_Timer()">
+            <input name="btn" type="radio" id="btn-timer" onclick="Remove_Clock()">
+            <div class="labels">
+                <div class="block-clock">
+                    <label class="btn-clock-label" for="btn-clock"></label>
+                    <div class="clock-txt"> - Clock</div>
+                </div>
+                <div class="block-timer">
+                    <label class="btn-timer-label" for="btn-timer"></label>
+                    <div class="timer-txt"> - Timer</div>
+                </div>
             </div>
             <div class="time">
+                <div id="time-txt">Press Clock or Timer button</div>
                 <div id="clock"></div>
                 <div id="timer"></div>
             </div>
-            <div class="other"></div>
+            <div class="other">
+                <div id="time-txt">13.08.2022</div>
+                <div id="btn-for-timer-1"></div>
+                <div id="btn-for-timer-2"></div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
+
 </html>
